@@ -1,24 +1,27 @@
 /* 星级评分样式 */
 
 /*表格边框设置*/
-.tableStyle{
-    width:75%;
-    border:0;
-    cellspacing:0;
-    cellpadding:0;
-    border:1px #aaa solid;
+.tableStyle {
+    width: 75%;
+    border: 0;
+    cellspacing: 0;
+    cellpadding: 0;
+    border: 1px #aaa solid;
 }
+
 /*设置表头文本样式*/
-.tableTitle{
+.tableTitle {
     text-align: left;
     font-family: 'Microsoft Yahei';
     font-size: 16px;
 }
-.foodsStyle, .title, .tips{
+
+.foodsStyle, .title, .tips {
     font-family: 'Microsoft Yahei';
     font-size: 16px;
 }
-.foodsInfo{
+
+.foodsInfo {
     font-family: 'Microsoft Yahei';
     font-size: 13px;
     color: black;
@@ -28,10 +31,12 @@
 .foodsInfo:hover {
     color: blue;
 }
-.imgSize{
-    width:100px;
-    height:100px;
+
+.imgSize {
+    width: 100px;
+    height: 100px;
 }
+
 .shop-rating {
     height: 25px;
     overflow: hidden;
@@ -56,7 +61,8 @@
 
 .shop-rating ul {
     float: left;
-    margin:0;padding:0
+    margin: 0;
+    padding: 0
 }
 
 .shop-rating .result {
@@ -67,19 +73,23 @@
 .shop-rating .result span {
     color: #ff6d02;
 }
+
 .shop-rating .result em {
     color: #f60;
     font-family: arial;
     font-weight: bold;
 }
+
 .shop-rating .result strong {
     color: #666666;
     font-weight: normal;
 }
+
 .rating-level,
 .rating-level a {
-    background: url(http://a.tbcdn.cn/app/rc/img/star_v2.png) no-repeat scroll 1000px 1000px;
+    background: url(../img/comment/star_v2.png) no-repeat scroll 1000px 1000px;
 }
+
 .rating-level {
     background-position: 0px 0px;
     width: 120px;
@@ -87,6 +97,7 @@
     position: relative;
     z-index: 1000;
 }
+
 .rating-level li {
     display: inline;
 }
@@ -101,7 +112,6 @@
     *zoom: 1;
     outline: none;
 }
-
 
 .rating-level a.one-star {
     width: 20%;
@@ -127,7 +137,8 @@
     width: 100%;
     z-index: 2;
 }
-.publishComment{
+
+.publishComment {
     display: inline-block;
     width: 150px;
     height: 40px;
@@ -136,7 +147,7 @@
     text-align: center;
     font-family: 'Microsoft Yahei';
     font-size: 16px;
-    color:white;
+    color: white;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -145,34 +156,15 @@
     cursor: pointer;
 
 }
-.rating-level .current-rating,.rating-level a:hover{background-position:0 -28px;}
-.rating-level a.one-star:hover,.rating-level a.two-stars:hover,.rating-level a.one-star.current-rating,.rating-level a.two-stars.current-rating{background-position:0 -116px;}
-.rating-level .three-stars .current-rating,.rating-level .four-stars .current-rating,.rating-level .five-stars .current-rating{background-position:0 -28px;}
-/*靠右显示*/
-.fr {
-    float: right;
+
+.rating-level .current-rating, .rating-level a:hover {
+    background-position: 0 -28px;
 }
 
-/*新开一行，靠右显示*/
-.cfr{
-    clear:both;
-    float:right;
+.rating-level a.one-star:hover, .rating-level a.two-stars:hover, .rating-level a.one-star.current-rating, .rating-level a.two-stars.current-rating {
+    background-position: 0 -116px;
 }
 
-/*靠左显示*/
-.fl {
-    float: left;
-}
-
-/*新开一行，靠左显示*/
-.cfl{
-    clear:both;
-    float:left;
-}
-.fb{
-    float:bottom;
-}
-.cfb{
-    clear:both;
-    float:bottom;
+.rating-level .three-stars .current-rating, .rating-level .four-stars .current-rating, .rating-level .five-stars .current-rating {
+    background-position: 0 -28px;
 }

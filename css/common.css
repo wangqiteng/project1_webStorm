@@ -1,0 +1,31 @@
+/*公共样式定义*/
+/*靠右显示*/
+.fr {
+    float: right;
+}
+
+/*新开一行，靠右显示*/
+.cfr {
+    clear: both;
+    float: right;
+}
+
+/*靠左显示*/
+.fl {
+    float: left;
+}
+
+/*新开一行，靠左显示*/
+.cfl {
+    clear: both;
+    float: left;
+}
+
+.fb {
+    float: bottom;
+}
+
+.cfb {
+    clear: both;
+    float: bottom;
+}

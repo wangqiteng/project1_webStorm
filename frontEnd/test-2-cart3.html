@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>购物车页面</title>
     <link rel="stylesheet" type="text/css" href="../css/test-2-cart3.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
     <script type="text/javascript" src="./js/shoppingCart.js"></script>
 </head>
 <body>
 <span class="cart">购物车</span>
 <br>
 <!--换行换不了！-->
-<table class="tableStyle" id="cart_table">
+<table class="tableStyle" id="cartTable">
     <thead>
     <tr class="tableTitle">
-        <th><input type="checkbox" id="check_all1" name="check_all" onClick="check_all(),countAll()">
+        <th><input type="checkbox" id="checkAll1" name="checkAll" onClick="checkAll(),countAll()">
             </input>
             全选
         </th>
@@ -26,7 +27,7 @@
     </thead>
     <tbody>
     <tr>
-        <td class="check"><input class="check_one" type="checkbox" id="check_one1" name="check_one"
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne1" name="checkOne"
                                  onClick="countAll()">
             </input></td>
         <td class="goodsInfo"><img class="imgSize" src="../img/cart/1.jpg">
@@ -37,13 +38,13 @@
             <input type="text" class="countInput" id="amount1" name="amount" value="1" size="10" maxlength="20">
             </input>
             <span class="add" id="add1" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
-        <td class="priceTotleNumber"><span id="sum_price1" name="sum_price"></span></td>
+        <td class="priceTotleNumber"><span id="sumPrice1" name="sumPrice"></span></td>
         <td class="operation"><span class="delete" id="delete1" onclick="deleteRow(this)">删除</span></td>
-        <td class="operation"><span class="move_to_favorite" id="move_to_favorite1"
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite1"
                                     onclick="moveToFavorite(this)">移至收藏夹</span></td>
     </tr>
     <tr class="order_content">
-        <td class="check"><input class="check_one" type="checkbox" id="check_one2" name="check_one"
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne2" name="checkOne"
                                  onClick="countAll()">
             </input></td>
         <td class="goodsInfo"><img class="imgSize" src="../img/cart/2.jpg">
@@ -54,13 +55,13 @@
             <input type="text" class="countInput" id="amount2" name="amount" value="2" size="10" maxlength="20">
             </input>
             <span class="add" id="add2" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
-        <td class="priceTotleNumber"><span id="sum_price2" name="sum_price"></span></td>
+        <td class="priceTotleNumber"><span id="sumPrice2" name="sumPrice"></span></td>
         <td class="operation"><span class="delete" id="delete2" onclick="deleteRow(this)">删除</span></td>
-        <td class="operation"><span class="move_to_favorite" id="move_to_favorite2"
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite2"
                                     onclick="moveToFavorite(this)">移至收藏夹</span></td>
     </tr>
     <tr class="order_content">
-        <td class="check"><input class="check_one" type="checkbox" id="check_one3" name="check_one"
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne3" name="checkOne"
                                  onClick="countAll()">
             </input></td>
         <td class="goodsInfo"><img class="imgSize" src="../img/cart/3.jpg">
@@ -71,13 +72,13 @@
             <input type="text" class="countInput" id="amount3" name="amount" value="3" size="10" maxlength="20">
             </input>
             <span class="add" id="add3" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
-        <td class="priceTotleNumber"><span id="sum_price3" name="sum_price"></span></td>
+        <td class="priceTotleNumber"><span id="sumPrice3" name="sumPrice"></span></td>
         <td class="operation"><span class="delete" id="delete3" onclick="deleteRow(this)">删除</span></td>
-        <td class="operation"><span class="move_to_favorite" id="move_to_favorite3"
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite3"
                                     onclick="moveToFavorite(this)">移至收藏夹</span></td>
     </tr>
     <tr>
-        <td class="check"><input class="check_one" type="checkbox" id="check_one4" name="check_one"
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne4" name="checkOne"
                                  onClick="countAll()">
             </input></td>
         <td class="goodsInfo"><img class="imgSize" src="../img/cart/4.jpg">
@@ -88,9 +89,9 @@
             <input type="text" class="countInput" id="amount4" name="amount" value="4" size="10" maxlength="20">
             </input>
             <span class="add" id="add4" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
-        <td class="priceTotleNumber"><span id="sum_price4" name="sum_price"></span></td>
+        <td class="priceTotleNumber"><span id="sumPrice4" name="sumPrice"></span></td>
         <td class="operation"><span class="delete" id="delete4" onclick="deleteRow(this)">删除</span></td>
-        <td class="operation"><span class="move_to_favorite" id="move_to_favorite4"
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite4"
                                     onclick="moveToFavorite(this)">移至收藏夹</span></td>
     </tr>
     </tbody>
@@ -99,8 +100,7 @@
 <br>
 </br>
 <div class="footerBackground" id="footer" name="footer">
-    <div class="fl footerFront"><input type="checkbox" id="check_all2" name="check_all"
-                                       onClick="check_all(),countAll()">
+    <div class="fl footerFront"><input type="checkbox" id="checkAll2" name="checkAll" onClick="checkAll(),countAll()">
         全选
         </input>
         &ensp;&ensp;                                                          <!-- 空格-->
@@ -108,24 +108,23 @@
     <div class="fl delete"><span id="delete" name="delete" onClick="deleteRow(this),countAll()">删除</span>
         &ensp;&ensp;                                                          <!-- 空格-->
     </div>
-    <div class="fl moveToFavorite"><span id="move_to_favorite" name="move_to_favorite"
+    <div class="fl moveToFavorite"><span id="moveToFavorite" name="moveToFavorite"
                                          onclick="moveToFavorite(this),countAll()">移至收藏夹</span></div>
     <input class="fr submit" type="submit" id="submit" name="submit" value="结算"/>
-    <div class="fr footerFront">合计（不含运费）：￥ <span class="subTotleNumber" id="price_totle" name="price_totle">0.00</span>
+    <div class="fr footerFront">合计（不含运费）：￥ <span class="subTotleNumber" id="priceTotle" name="priceTotle">0.00</span>
     </div>
 
-    <div class="fr footerFront" id="selected">已选商品 <span class="selectTotleNumber" id="select_totle"
-                                                         name="select_totle">0</span>件
+    <div class="fr footerFront" id="selected">已选商品 <span class="selectTotleNumber" id="selectTotle"
+                                                         name="selectTotle">0</span>件
         &ensp;&ensp;&ensp;&ensp;                                            <!-- 空格-->
     </div>
 </div>
 
 <script language="javascript">
-
     //处理全选复选框的全选/取消全选
-    function check_all() {
-        var checkBoxGroup = document.getElementsByName("check_one");
-        if (document.getElementById("check_all1").checked || document.getElementById("check_all2").checked) {
+    function checkAll() {
+        var checkBoxGroup = document.getElementsByName("checkOne");
+        if (document.getElementById("checkAll1").checked || document.getElementById("checkAll2").checked) {
             for (var i = 0; i < checkBoxGroup.length; ++i) {
                 checkBoxGroup.item(i).checked = true;
             }
@@ -134,8 +133,8 @@
             for (var i = 0; i < checkBoxGroup.length; ++i) {
                 checkBoxGroup.item(i).checked = false;
             }
-            document.getElementById("check_all1").checked = false;
-            document.getElementById("check_all2").checked = false;
+            document.getElementById("checkAll1").checked = false;
+            document.getElementById("checkAll2").checked = false;
         }
     }
 
@@ -143,7 +142,7 @@
     function sumPrice() {
         var price = document.getElementsByName("price");			            //单价
         var amount = document.getElementsByName("amount");			        //数量
-        var sumPrice = document.getElementsByName("sum_price");		        //金额
+        var sumPrice = document.getElementsByName("sumPrice");		        //金额
         for (var i = 0; i < price.length; ++i) {					            //计算每种商品的金额
             sumPrice.item(i).innerHTML = (price.item(i).innerHTML * amount.item(i).value).toFixed(2);
         }
@@ -163,10 +162,9 @@
     function countAll() {
         var countFoods = 0;												        //已选商品件数
         var countPrice = 0;                                                    //已选商品总价格
-        var checkBoxGroup = document.getElementsByName("check_one");         //复选框组
-        var sumPrice = document.getElementsByName("sum_price");              //每件商品的价格
+        var checkBoxGroup = document.getElementsByName("checkOne");         //复选框组
+        var sumPrice = document.getElementsByName("sumPrice");              //每件商品的价格
         var submit = document.getElementById("submit");                     //提交按钮
-
         for (var i = 0; i < checkBoxGroup.length; ++i) {
             if (checkBoxGroup.item(i).checked) {
                 ++countFoods;
@@ -182,17 +180,17 @@
             submit.style.backgroundColor = "#f40";                             // 并修改按钮背景色为橙色
         }
         countPrice = countPrice.toFixed(2);                                     //已选商品总金额保留两位小数
-        document.getElementById("select_totle").innerHTML = countFoods;
-        document.getElementById("price_totle").innerHTML = countPrice;
+        document.getElementById("selectTotle").innerHTML = countFoods;
+        document.getElementById("priceTotle").innerHTML = countPrice;
     }
     countAll();													                //页面加载时，调用函数，会计算一次
     //删除某件商品
     function deleteRow(obj) {
-        var table = document.getElementById("cart_table");
+        var table = document.getElementById("cartTable");
         var row = 0;
         var count = 0;
         if (obj.id == "delete") {
-            var checkBoxGroup = document.getElementsByName("check_one");      //复选框组
+            var checkBoxGroup = document.getElementsByName("checkOne");      //复选框组
             for (var i = checkBoxGroup.length - 1; i >= 0; --i) {
                 if (checkBoxGroup.item(i).checked) {                            //删除所有已勾选的商品(从下往上删，最小下标为0，否则行号会发生变化)
                     ++count;
@@ -210,11 +208,11 @@
     //将某件商品移至收藏夹
     //（要将数据移至收藏夹，此处后期要与其他页面关联，暂未做）///////////////////////////////////////////////////////
     function moveToFavorite(obj) {
-        var table = document.getElementById("cart_table");
+        var table = document.getElementById("cartTable");
         var row = 0;
         var count = 0;
-        if (obj.id == "move_to_favorite") {
-            var checkBoxGroup = document.getElementsByName("check_one");      //复选框组
+        if (obj.id == "moveToFavorite") {
+            var checkBoxGroup = document.getElementsByName("checkOne");      //复选框组
             for (var i = checkBoxGroup.length - 1; i >= 0; --i) {
                 if (checkBoxGroup.item(i).checked) {                            //删除所有已勾选的商品(从下往上删，最小下标为0，否则行号会发生变化)
                     ++count;                                                    //要将数据移至收藏夹，此处后期要与其他页面关联

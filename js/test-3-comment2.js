@@ -49,8 +49,8 @@ Stars.prototype = {
                 this.className = this.className + nowClass;
                 flag = this.value;
                 input.value = this.getAttribute("star:value");
-                tips.innerHTML = tipsTxt[this.value]
-                starlist[flag].className = starlist[flag].className.replace(reg, "");
+                tips.innerHTML = tipsTxt[this.value];
+
             };
             starlist[i].onmouseover = function () {
                 if (flag < 999) {

@@ -124,25 +124,3 @@ span.add, span.reduce {
     width: 100px;
     height: 100px;
 }
-
-/*靠右显示*/
-.fr {
-    float: right;
-}
-
-/*新开一行，靠右显示*/
-.cfr {
-    clear: both;
-    float: right;
-}
-
-/*靠左显示*/
-.fl {
-    float: left;
-}
-
-/*新开一行，靠左显示*/
-.cfl {
-    clear: both;
-    float: left;
-}

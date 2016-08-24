@@ -1,0 +1,189 @@
+/*页面标题的背景色*/
+.frontBackground {
+    height: 30px;
+    width: 75%;
+    background: #EFEFEF;
+    font-family: 'Microsoft Yahei';
+}
+
+.title {
+
+    display: inline-block;
+    letter-spacing: 3px;
+    height: 30px;
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    color: white;
+    background-color: #FF4400;
+}
+
+/*华丽的分割线*/
+.splitLine {
+    style: "border:1 dashed #987cb9";
+    width: 75%;
+    color: #987cb9;
+
+}
+
+/*表格边框设置*/
+.tableStyle {
+    width: 75%;
+    border: 0;
+    cellspacing: 0;
+    cellpadding: 0;
+    border: 1px #aaa solid;
+}
+
+/*设置表头文本样式*/
+.tableTitle {
+    text-align: left;
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+}
+
+/*商品、标题文本样式*/
+.foodsStyle {
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+}
+
+/*提示信息文本样式*/
+.tips {
+    /*    clolr:#808080;*/
+    color: darkgray;
+    margin-top: 7px;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+}
+
+/*商品信息文本样式*/
+.foodsInfo {
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+/*鼠标悬停在商品信息上时文本变色*/
+.foodsInfo:hover {
+    color: blue;
+}
+
+/*图片尺寸设置*/
+.imgSize {
+    width: 100px;
+    height: 100px;
+}
+
+/*剩余字数栏背景样式*/
+.footerBackground {
+    height: 30px;
+    width: 440px;
+    background: #EEF8FD;
+    font-family: 'Microsoft Yahei';
+}
+
+/*上传图片按钮样式*/
+.uploadPicture {
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 20px;
+    background: #93B4C6;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*发布评论按钮样式*/
+.publishComment {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 25px;
+    background: #5DADE2;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*星级评分样式及其他*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: "Microsoft Yahei";
+}
+
+ul, li {
+    list-style: none;
+}
+
+.star {
+    position: relative;
+    width: 300px;
+    height: 24px;
+    margin: 20px auto 0;
+}
+
+.star span {
+    float: left;
+    height: 19px;
+    line-height: 19px;
+}
+
+.star ul {
+    margin: 0 10px;
+}
+
+.star li {
+    float: left;
+    width: 24px;
+    height: 22px;
+    text-indent: -9999px;
+    background: url('../img/comment/star.png') no-repeat;
+    cursor: pointer;
+}
+
+.star li.on {
+    background-position: 0 -28px;
+}
+
+.star p {
+    background: url('../img/comment/icon.gif') no-repeat;
+    padding: 10px 10px 0;
+    position: absolute;
+    top: 20px;
+    width: 159px;
+    height: 60px;
+    z-index: 100;
+}
+
+.star p em {
+    color: #FF6600;
+    display: block;
+    font-style: normal;
+}
+
+.star strong {
+    color: #ff6600;
+    padding-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
