@@ -12,15 +12,15 @@
         # star:value = 分数
 -->
 <span class="fl foodsStyle">宝贝动态评分</span>
-<table class="cfl tableStyle" id="commentTable" >
+<table class="cfl tableStyle" id="commentTable">
     <thead>
     <tr class="tableTitle">
         <th>商品信息</th>
     </tr>
     </thead>
     <tbody>
-        <td><img class="imgSize" src="../img/comment/plaidShirt.jpg"></td>
-        <td><span class="foodsInfo" id="foodsInfo" name="foodsInfo">M4526 mimius夏日新款女格子百搭日系百搭修身无袖衬衫</span></td>
+    <td><img class="imgSize" src="../img/comment/plaidShirt.jpg"></td>
+    <td><a class="foodsInfo" id="foodsInfo" name="foodsInfo" href="http:url">M4526 mimius夏日新款女格子百搭日系百搭修身无袖衬衫</a></td>
     </tbody>
 </table>
 
@@ -35,7 +35,7 @@
         <li><a class="five-stars" star:value="100" href="#">100</a></li>
     </ul>
     <span class="result" id="stars2MatchResult"></span>
-    <input type="hidden" id="stars2MatchInput" name="b" value="" size="2" />
+    <input type="hidden" id="stars2MatchInput" name="b" value="" size="2"/>
 </div>
 
 <!--发货速度-->
@@ -49,7 +49,7 @@
         <li><a class="five-stars" star:value="100" href="#">100</a></li>
     </ul>
     <span class="result" id="starsSpeedResult"></span>
-    <input type="hidden" id="starsSpeedInput" name="b" value="" size="2" />
+    <input type="hidden" id="starsSpeedInput" name="b" value="" size="2"/>
 </div>
 
 <!--服务态度-->
@@ -63,31 +63,32 @@
         <li><a class="five-stars" star:value="100" href="#">100</a></li>
     </ul>
     <span class="result" id="starsServerResult"></span>
-    <input type="hidden" id="starsServerInput" name="b" value="" size="2" />
+    <input type="hidden" id="starsServerInput" name="b" value="" size="2"/>
 </div>
 
-<br />
+<br/>
 <!--换行符无效！-->
 
 <!--评论框-->
 <p>
-    <textarea class="cfl" name="textArea" cols="60" rows="10" id = "textArea" name="textArea" maxlength=500 onkeyup="availableChar('textArea','countChar','500');"></textarea>
-    <span class="cfl tips"id = "countChar">还可以输入500字</span>
+    <textarea class="cfl" name="textArea" cols="60" rows="10" id="textArea" name="textArea" maxlength=500
+              onkeyup="availableChar('textArea','countChar','500');"></textarea>
+    <span class="cfl tips" id="countChar">还可以输入500字</span>
 </p>
 </br>
 <!--换行用不了-->
-    <input class="cfl publishComment" type="submit" id="publishComment" name="publishComment" value="发表评论"/>
+<input class="cfl publishComment" type="submit" id="publishComment" name="publishComment" value="发表评论"/>
 <!-- END 星级评分 -->
 <script language="javascript">
-//评论文本框,当用户输入时,可以实时统计剩余字符数(假设文本框最多可接受输入maxChar个字符)
+    //评论文本框,当用户输入时,可以实时统计剩余字符数(假设文本框最多可接受输入maxChar个字符)
 
-function availableChar(textAreaId,countCharId,maxChar){
-    nowCountChar = document.getElementById(textAreaId).value.length;
-    if(nowCountChar <= maxChar)
-        document.getElementById(countCharId).innerHTML = "还可以输入" + (maxChar - nowCountChar) + "字";
-    else
-        document.getElementById(countCharId).innerHTML = "还可以输入0字";
-}
+    function availableChar(textAreaId, countCharId, maxChar) {
+        nowCountChar = document.getElementById(textAreaId).value.length;
+        if (nowCountChar <= maxChar)
+            document.getElementById(countCharId).innerHTML = "还可以输入" + (maxChar - nowCountChar) + "字";
+        else
+            document.getElementById(countCharId).innerHTML = "还可以输入0字";
+    }
 
 </script>
 </body>

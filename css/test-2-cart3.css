@@ -2,141 +2,147 @@
 /*购物车样式*/
 
 /*“购物车”文本样式*/
-.cart{
-	font-family: 'Microsoft Yahei';
-	font-size: 20px;
-	font-weight:normal;
+.cart {
+    font-family: 'Microsoft Yahei';
+    font-size: 20px;
+    font-weight: normal;
 }
+
 /*表格边框设置*/
-.tableStyle{
-	width:99%;
-	border:0;
-	cellspacing:0;
-	cellpadding:0;
-	border:1px #aaa solid;
+.tableStyle {
+    width: 99%;
+    border: 0;
+    cellspacing: 0;
+    cellpadding: 0;
+    border: 1px #aaa solid;
 }
+
 /*设置表头文本样式*/
-.tableTitle{
-	text-align: left;
-	font-family: 'Microsoft Yahei';
-	font-size: 18px;
-	font-weight:bold;
+.tableTitle {
+    text-align: left;
+    font-family: 'Microsoft Yahei';
+    font-size: 18px;
+    font-weight: bold;
 }
+
 /*商品信息、单价、数量、操作项的文本样式*/
-.goodsInfo,.price,.count,.operation{
-	color:black;
-	font-family: 'Microsoft Yahei';
-	font-size: 13px;
+.goodsInfo, .price, .count, .operation {
+    color: black;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
 }
 
 /*商品信息、操作项在鼠标略过时文本变色*/
-.goodsInfo:hover,.operation:hover,.delete:hover,.moveToFavorite:hover{
-	color:blue;
+.goodsInfo:hover, .operation:hover, .delete:hover, .moveToFavorite:hover {
+    color: blue;
 }
+
 /*加减商品数量的文本样式*/
 span.add, span.reduce {
-	height: 23px;
-	width: 27px;
-	border: 3px solid #e5e5e5;
-	background: #e5e5e5;
-	line-height: 23px;
-	color: #444;
+    height: 23px;
+    width: 27px;
+    border: 3px solid #e5e5e5;
+    background: #e5e5e5;
+    line-height: 23px;
+    color: #444;
 }
 
 /*每项商品(可能包含1件到多件)的金额数字样式*/
-.priceTotleNumber{
-	color: #f40;
-	font-weight: 700;
-	font-size: 16px;
-	font-family: tohoma, arial;
-	padding: 5px;	
+.priceTotleNumber {
+    color: #f40;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: tohoma, arial;
+    padding: 5px;
 }
 
 /*已选商品数量样式、合计金额数字样式*/
-.selectTotleNumber,.subTotleNumber {
-	color: #f40;
-	font-weight: 700;
-	font-size: 20px;
-	font-family: tohoma, arial;
-	padding: 5px;
+.selectTotleNumber, .subTotleNumber {
+    color: #f40;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: tohoma, arial;
+    padding: 5px;
 }
 
 /*输入商品数量的数字样式*/
 .countInput {
-	width: 39px;
-	height: 15px;
-	line-height: 15px;
-	border: 1px solid #aaa;
-	color: #343434;
-	text-align: center;
-	padding: 4px 0;
-	background-color: #fff;
+    width: 39px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    padding: 4px 0;
+    background-color: #fff;
 }
 
 /*合计栏文本样式*/
-.footerFront{
-	margin-top: 15px;
-	font-family: 'Microsoft Yahei';
-	font-size: 16px;
+.footerFront {
+    margin-top: 15px;
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
 }
 
 /*合计栏的删除、移至收藏夹文本样式*/
-.delete,.moveToFavorite{
-	margin-top: 18px;
-	font-family: 'Microsoft Yahei';
-	font-size: 13px;
-	color:black;
+.delete, .moveToFavorite {
+    margin-top: 18px;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+    color: black;
 }
 
 /*合计栏背景样式*/
 .footerBackground {
-	height: 50px;
-	background: #e5e5e5;
-	font-family: 'Microsoft Yahei';
+    height: 50px;
+    background: #e5e5e5;
+    font-family: 'Microsoft Yahei';
 }
 
 /*结算按钮样式*/
-.submit{
-	display: inline-block;
-	color: white;
-	letter-spacing:3px;
-	width: 100px;
-	height: 50px;
-	line-height: 40px;
-	background: #aaa;
-	text-align: center;
-	font-family: 'Microsoft Yahei';
-	font-size: 18px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	border-radius: 5px;
-	text-decoration: none;
-	cursor: pointer;
+.submit {
+    display: inline-block;
+    color: white;
+    letter-spacing: 3px;
+    width: 100px;
+    height: 50px;
+    line-height: 40px;
+    background: #aaa;
+    text-align: center;
+    font-family: 'Microsoft Yahei';
+    font-size: 18px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
 }
+
 /*商品配图大小样式*/
-.imgSize{
-	width:100px;
-	height:100px;
+.imgSize {
+    width: 100px;
+    height: 100px;
 }
+
 /*靠右显示*/
 .fr {
-	float: right;
+    float: right;
 }
 
 /*新开一行，靠右显示*/
-.cfr{
-	clear:both;
-	float:right;
+.cfr {
+    clear: both;
+    float: right;
 }
 
 /*靠左显示*/
 .fl {
-	float: left;
+    float: left;
 }
 
 /*新开一行，靠左显示*/
-.cfl{
-	clear:both;
-	float:left;
+.cfl {
+    clear: both;
+    float: left;
 }

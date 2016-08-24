@@ -21,7 +21,12 @@
 .foodsInfo{
     font-family: 'Microsoft Yahei';
     font-size: 13px;
-    color:blue;
+    color: black;
+    text-decoration: none;
+}
+
+.foodsInfo:hover {
+    color: blue;
 }
 .imgSize{
     width:100px;

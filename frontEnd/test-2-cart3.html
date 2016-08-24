@@ -7,7 +7,7 @@
     <script type="text/javascript" src="./js/shoppingCart.js"></script>
 </head>
 <body>
-<span  class="cart">购物车</span>
+<span class="cart">购物车</span>
 <br>
 <!--换行换不了！-->
 <table class="tableStyle" id="cart_table">
@@ -30,7 +30,7 @@
                                  onClick="countAll()">
             </input></td>
         <td class="goodsInfo"><img class="imgSize" src="../img/cart/1.jpg">
-            <span display="block" float="left" >M4605 mimius定制15夏季新款女日系撞色拼接木耳边织带短袖T </span></td>
+            <span display="block" float="left">M4605 mimius定制15夏季新款女日系撞色拼接木耳边织带短袖T </span></td>
         <td class="price"><span id="price1" name="price">99.99</span></td>
         <td class="count">
             <span class="reduce" id="minus1" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
@@ -101,8 +101,8 @@
 <div class="footerBackground" id="footer" name="footer">
     <div class="fl footerFront"><input type="checkbox" id="check_all2" name="check_all"
                                        onClick="check_all(),countAll()">
-    全选
-    </input>
+        全选
+        </input>
         &ensp;&ensp;                                                          <!-- 空格-->
     </div>
     <div class="fl delete"><span id="delete" name="delete" onClick="deleteRow(this),countAll()">删除</span>
@@ -156,7 +156,7 @@
     }
     //某商品数量减1
     function minusAmount(obj) {
-        if(document.getElementById(obj.id).nextElementSibling.value > 1)    //根据加标签取得数量值并减1（前提是数量大于1）
+        if (document.getElementById(obj.id).nextElementSibling.value > 1)    //根据加标签取得数量值并减1（前提是数量大于1）
             --(document.getElementById(obj.id).nextElementSibling.value);
     }
     //统计已购商品的总件数及总金额并设置对应的结算按钮的背景色样式
@@ -173,13 +173,13 @@
                 countPrice += Number(sumPrice.item(i).innerHTML);
             }
         }
-        if(countFoods == 0){                                                    //在未选中任何商品时，结算按钮设置为不可用状态
-            submit.disabled=true;                                              //且按钮背景色为灰色
-            submit.style.backgroundColor="#aaa";
+        if (countFoods == 0) {                                                    //在未选中任何商品时，结算按钮设置为不可用状态
+            submit.disabled = true;                                              //且按钮背景色为灰色
+            submit.style.backgroundColor = "#aaa";
         }
-        else{
-            submit.disabled=false;                                             //当已选商品不为空时，使能结算按钮，
-            submit.style.backgroundColor="#f40";                             // 并修改按钮背景色为橙色
+        else {
+            submit.disabled = false;                                             //当已选商品不为空时，使能结算按钮，
+            submit.style.backgroundColor = "#f40";                             // 并修改按钮背景色为橙色
         }
         countPrice = countPrice.toFixed(2);                                     //已选商品总金额保留两位小数
         document.getElementById("select_totle").innerHTML = countFoods;
@@ -187,13 +187,13 @@
     }
     countAll();													                //页面加载时，调用函数，会计算一次
     //删除某件商品
-    function deleteRow(obj){
+    function deleteRow(obj) {
         var table = document.getElementById("cart_table");
         var row = 0;
         var count = 0;
-        if(obj.id=="delete"){
+        if (obj.id == "delete") {
             var checkBoxGroup = document.getElementsByName("check_one");      //复选框组
-            for (var i = checkBoxGroup.length-1; i >= 0; --i) {
+            for (var i = checkBoxGroup.length - 1; i >= 0; --i) {
                 if (checkBoxGroup.item(i).checked) {                            //删除所有已勾选的商品(从下往上删，最小下标为0，否则行号会发生变化)
                     ++count;
                     row = checkBoxGroup.item(i).parentNode.parentNode.rowIndex;
@@ -201,7 +201,7 @@
                 }
             }
         }
-        else{                                                                   //删除某件商品
+        else {                                                                   //删除某件商品
             row = obj.parentNode.parentNode.rowIndex;
             table.deleteRow(row);
 
@@ -209,13 +209,13 @@
     }
     //将某件商品移至收藏夹
     //（要将数据移至收藏夹，此处后期要与其他页面关联，暂未做）///////////////////////////////////////////////////////
-    function moveToFavorite(obj){
+    function moveToFavorite(obj) {
         var table = document.getElementById("cart_table");
         var row = 0;
         var count = 0;
         if (obj.id == "move_to_favorite") {
             var checkBoxGroup = document.getElementsByName("check_one");      //复选框组
-            for (var i = checkBoxGroup.length-1; i >= 0; --i) {
+            for (var i = checkBoxGroup.length - 1; i >= 0; --i) {
                 if (checkBoxGroup.item(i).checked) {                            //删除所有已勾选的商品(从下往上删，最小下标为0，否则行号会发生变化)
                     ++count;                                                    //要将数据移至收藏夹，此处后期要与其他页面关联
                     row = checkBoxGroup.item(i).parentNode.parentNode.rowIndex;
@@ -223,7 +223,7 @@
                 }
             }
         }
-        else{                                                                   //删除某件商品并移至收藏夹
+        else {                                                                   //删除某件商品并移至收藏夹
             row = obj.parentNode.parentNode.rowIndex;
             table.deleteRow(row);
         }
