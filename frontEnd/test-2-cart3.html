@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>购物车页面</title>
+    <link rel="stylesheet" type="text/css" href="../css/test-2-cart3.css">
+    <script type="text/javascript" src="./js/shoppingCart.js"></script>
+</head>
+<body>
+<span  class="cart">购物车</span>
+<br>
+<!--换行换不了！-->
+<table class="tableStyle" id="cartTable" >
+    <thead>
+    <tr class="tableTitle">
+        <th><input type="checkbox" id="checkAll1" name="checkAll" onClick="checkAll(),countAll()">
+            </input>
+            全选
+        </th>
+        <th>商品信息</th>
+        <th>单价</th>
+        <th>数量</th>
+        <th>金额</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne1" name="checkOne"
+                                 onClick="countAll()">
+            </input></td>
+        <td class="goodsInfo"><img class="imgSize" src="../img/cart/1.jpg">
+            <span display="block" float="left" >M4605 mimius定制15夏季新款女日系撞色拼接木耳边织带短袖T </span></td>
+        <td class="price"><span id="price1" name="price">99.99</span></td>
+        <td class="count">
+            <span class="reduce" id="minus1" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
+            <input type="text" class="countInput" id="amount1" name="amount" value="1" size="10" maxlength="20">
+            </input>
+            <span class="add" id="add1" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
+        <td class="priceTotleNumber"><span id="sumPrice1" name="sumPrice"></span></td>
+        <td class="operation"><span class="delete" id="delete1" onclick="deleteRow(this)">删除</span></td>
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite1" onclick="moveToFavorite(this)">移至收藏夹</span></td>
+    </tr>
+    <tr class="order_content">
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne2" name="checkOne"
+                                 onClick="countAll()">
+            </input></td>
+        <td class="goodsInfo"><img class="imgSize" src="../img/cart/2.jpg">
+            <span>M4625 mimius定制15夏新款女优雅印花名媛篷篷裙半身裙长裙 </span></td>
+        <td class="price"><span id="price2" name="price">79.99</span></td>
+        <td class="count">
+            <span class="reduce" id="minus2" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
+            <input type="text" class="countInput" id="amount2" name="amount" value="2" size="10" maxlength="20">
+            </input>
+            <span class="add" id="add2" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
+        <td class="priceTotleNumber"><span id="sumPrice2" name="sumPrice"></span></td>
+        <td class="operation"><span class="delete" id="delete2" onclick="deleteRow(this)">删除</span></td>
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite2" onclick="moveToFavorite(this)">移至收藏夹</span></td>
+    </tr>
+    <tr class="order_content">
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne3" name="checkOne"
+                                 onClick="countAll()">
+            </input></td>
+        <td class="goodsInfo"><img class="imgSize" src="../img/cart/3.jpg">
+            <span>M4544 mimius定制15夏新品女马卡龙百搭清新蝴蝶结短袖上衣T恤女 </span></td>
+        <td class="price"><span id="price3" name="price">89.99</span></td>
+        <td class="count">
+            <span class="reduce" id="minus3" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
+            <input type="text" class="countInput" id="amount3" name="amount" value="3" size="10" maxlength="20">
+            </input>
+            <span class="add" id="add3" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
+        <td class="priceTotleNumber"><span id="sumPrice3" name="sumPrice"></span></td>
+        <td class="operation"><span class="delete" id="delete3" onclick="deleteRow(this)">删除</span></td>
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite3" onclick="moveToFavorite(this)">移至收藏夹</span></td>
+    </tr>
+    <tr>
+        <td class="check"><input class="check_one" type="checkbox" id="checkOne4" name="checkOne"
+                                 onClick="countAll()">
+            </input></td>
+        <td class="goodsInfo"><img class="imgSize" src="../img/cart/4.jpg">
+            <span>M4702 mimius15夏新品透视两件套木耳边气质无袖雪纺衬衫</span></td>
+        <td class="price"><span id="price4" name="price">94.99</span></td>
+        <td class="count">
+            <span class="reduce" id="minus4" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
+            <input type="text" class="countInput" id="amount4" name="amount" value="4" size="10" maxlength="20">
+            </input>
+            <span class="add" id="add4" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
+        <td class="priceTotleNumber"><span id="sumPrice4" name="sumPrice"></span></td>
+        <td class="operation"><span class="delete" id="delete4" onclick="deleteRow(this)">删除</span></td>
+        <td class="operation"><span class="moveToFavorite" id="moveToFavorite4" onclick="moveToFavorite(this)">移至收藏夹</span></td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+</br>
+<div class="footerBackground" id="footer" name="footer">
+    <div class="fl footerFront"><input type="checkbox" id="checkAll2" name="checkAll" onClick="checkAll(),countAll()">
+    全选
+    </input>
+        &ensp;&ensp;                                                          <!-- 空格-->
+    </div>
+    <div class="fl delete"><span id="delete" name="delete" onClick="deleteRow(this),countAll()">删除</span>
+        &ensp;&ensp;                                                          <!-- 空格-->
+    </div>
+    <div class="fl moveToFavorite"><span id="moveToFavorite" name="moveToFavorite" onclick="moveToFavorite(this),countAll()">移至收藏夹</span></div>
+    <input class="fr submit" type="submit" id="submit" name="submit" value="结算"/>
+    <div class="fr footerFront">合计（不含运费）：￥ <span class="subTotleNumber" id="priceTotle" name="priceTotle">0.00</span></div>
+
+    <div class="fr footerFront" id="selected">已选商品 <span class="selectTotleNumber" id="selectTotle"
+                                                         name="selectTotle">0</span>件
+        &ensp;&ensp;&ensp;&ensp;                                            <!-- 空格-->
+    </div>
+</div>
+
+<script language="javascript">
+    //处理全选复选框的全选/取消全选
+    function checkAll() {
+        var checkBoxGroup = document.getElementsByName("checkOne");
+        if (document.getElementById("checkAll1").checked || document.getElementById("checkAll2").checked) {
+            for (var i = 0; i < checkBoxGroup.length; ++i) {
+                checkBoxGroup.item(i).checked = true;
+            }
+        }
+        else {
+            for (var i = 0; i < checkBoxGroup.length; ++i) {
+                checkBoxGroup.item(i).checked = false;
+            }
+            document.getElementById("checkAll1").checked = false;
+            document.getElementById("checkAll2").checked = false;
+        }
+    }
+
+    //计算每种商品的金额（金额=单价*数量）
+    function sumPrice() {
+        var price = document.getElementsByName("price");			            //单价
+        var amount = document.getElementsByName("amount");			        //数量
+        var sumPrice = document.getElementsByName("sumPrice");		        //金额
+        for (var i = 0; i < price.length; ++i) {					            //计算每种商品的金额
+            sumPrice.item(i).innerHTML = (price.item(i).innerHTML * amount.item(i).value).toFixed(2);
+        }
+    }
+    sumPrice();														            //页面加载时,调用函数,会计算一次
+
+    //某商品数量加1
+    function addAmount(obj) {
+        ++(document.getElementById(obj.id).previousElementSibling.value);  //根据加标签取得数量值并加1
+    }
+    //某商品数量减1
+    function minusAmount(obj) {
+        if(document.getElementById(obj.id).nextElementSibling.value > 1)    //根据加标签取得数量值并减1（前提是数量大于1）
+            --(document.getElementById(obj.id).nextElementSibling.value);
+    }
+    //统计已购商品的总件数及总金额并设置对应的结算按钮的背景色样式
+    function countAll() {
+        var countFoods = 0;												        //已选商品件数
+        var countPrice = 0;                                                    //已选商品总价格
+        var checkBoxGroup = document.getElementsByName("checkOne");         //复选框组
+        var sumPrice = document.getElementsByName("sumPrice");              //每件商品的价格
+        var submit = document.getElementById("submit");                     //提交按钮
+        for (var i = 0; i < checkBoxGroup.length; ++i) {
+            if (checkBoxGroup.item(i).checked) {
+                ++countFoods;
+                countPrice += Number(sumPrice.item(i).innerHTML);
+            }
+        }
+        if(countFoods == 0){                                                    //在未选中任何商品时，结算按钮设置为不可用状态
+            submit.disabled=true;                                              //且按钮背景色为灰色
+            submit.style.backgroundColor="#aaa";
+        }
+        else{
+            submit.disabled=false;                                             //当已选商品不为空时，使能结算按钮，
+            submit.style.backgroundColor="#f40";                             // 并修改按钮背景色为橙色
+        }
+        countPrice = countPrice.toFixed(2);                                     //已选商品总金额保留两位小数
+        document.getElementById("selectTotle").innerHTML = countFoods;
+        document.getElementById("priceTotle").innerHTML = countPrice;
+    }
+    countAll();													                //页面加载时，调用函数，会计算一次
+    //删除某件商品
+    function deleteRow(obj){
+        var table = document.getElementById("cartTable");
+        var row = 0;
+        var count = 0;
+        if(obj.id=="delete"){
+            var checkBoxGroup = document.getElementsByName("checkOne");      //复选框组
+            for (var i = checkBoxGroup.length-1; i >= 0; --i) {
+                if (checkBoxGroup.item(i).checked) {                            //删除所有已勾选的商品(从下往上删，最小下标为0，否则行号会发生变化)
+                    ++count;
+                    row = checkBoxGroup.item(i).parentNode.parentNode.rowIndex;
+                    table.deleteRow(row);
+                }
+            }
+        }
+        else{                                                                   //删除某件商品
+            row = obj.parentNode.parentNode.rowIndex;
+            table.deleteRow(row);
+
+        }
+    }
+    //将某件商品移至收藏夹
+    //（要将数据移至收藏夹，此处后期要与其他页面关联，暂未做）///////////////////////////////////////////////////////
+    function moveToFavorite(obj){
+        var table = document.getElementById("cartTable");
+        var row = 0;
+        var count = 0;
+        if(obj.id=="moveToFavorite"){
+            var checkBoxGroup = document.getElementsByName("checkOne");      //复选框组
+            for (var i = checkBoxGroup.length-1; i >= 0; --i) {
+                if (checkBoxGroup.item(i).checked) {                            //删除所有已勾选的商品(从下往上删，最小下标为0，否则行号会发生变化)
+                    ++count;                                                    //要将数据移至收藏夹，此处后期要与其他页面关联
+                    row = checkBoxGroup.item(i).parentNode.parentNode.rowIndex;
+                    table.deleteRow(row);
+                }
+            }
+        }
+        else{                                                                   //删除某件商品并移至收藏夹
+            row = obj.parentNode.parentNode.rowIndex;
+            table.deleteRow(row);
+        }
+    }
+</script>
+</body>
+</html>
