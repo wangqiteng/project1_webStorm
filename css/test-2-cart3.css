@@ -79,6 +79,7 @@ span.add, span.reduce {
 	font-family: 'Microsoft Yahei';
 	font-size: 16px;
 }
+
 /*合计栏的删除、移至收藏夹文本样式*/
 .delete,.moveToFavorite{
 	margin-top: 18px;
