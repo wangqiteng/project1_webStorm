@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="../css/test-3-comment3.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <script src="../js/test-3-comment3.js"></script>
+    <script src="../js/jquery-3.1.0.min.js"></script>
+
+    <!-- 图片放大样式-->
     <style type="text/css">
         ul, li {
             list-style: none;
@@ -165,7 +168,7 @@
 <div class="cfc"><input class="publishComment" type="submit" id="publishComment" name="publishComment" value="发表评论"/>
 </div>
 <!-- END 星级评分 -->
-<script src="../js/jquery-3.1.0.min.js"></script>                       <!--此句后面可以加快页面加载速度-->
+
 <script language="javascript">
     //评论文本框,当用户输入时,可以实时统计剩余字符数(假设文本框最多可接受输入maxChar个字符)
 
@@ -177,13 +180,6 @@
             document.getElementById(countCharId).innerHTML = "还可以输入0字";
     }
 
-    /*    function enlargeImage(obj){
-     obj.setAttribute("class","enlargeImgSize");
-     }
-
-     function narrowImage(obj){
-     obj.setAttribute("class","originalImgSize");
-     }*/
     //放大图片
     $(function () {
         $(".heartPic li").hover(function () {

@@ -25,11 +25,24 @@
     font-weight: bold;
 }
 
+/*设置单元格文本显示方式*/
+.cell {
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-top; /*从顶端开始显示*/
+}
+
+/*复选框样式*/
+.check {
+    vertical-align: text-top; /*从顶端开始显示*/
+}
 /*商品信息、单价、数量、操作项的文本样式*/
 .goodsInfo, .price, .count, .operation {
+    position: relative;
     color: black;
     font-family: 'Microsoft Yahei';
     font-size: 13px;
+    vertical-align: text-top; /*从顶端开始显示*/
 }
 
 /*商品信息、操作项在鼠标略过时文本变色*/
@@ -54,6 +67,7 @@ span.add, span.reduce {
     font-size: 16px;
     font-family: tohoma, arial;
     padding: 5px;
+    vertical-align: text-top; /*从顶端开始显示*/
 }
 
 /*已选商品数量样式、合计金额数字样式*/

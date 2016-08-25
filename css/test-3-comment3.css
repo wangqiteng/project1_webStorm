@@ -75,18 +75,6 @@
     color: blue;
 }
 
-/*
-!*原始图片尺寸设置*!
-.originalImgSize {
-    width: 100px;
-    height: 100px;
-}
-
-.enlargeImgSize {
-    width: 200px;
-    height: 200px;
-}*/
-/*剩余字数栏背景样式*/
 .footerBackground {
     height: 30px;
     width: 440px;

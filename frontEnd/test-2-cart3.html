@@ -8,7 +8,10 @@
     <script type="text/javascript" src="./js/shoppingCart.js"></script>
 </head>
 <body>
-<span class="cart">购物车</span>
+<span class="fl cart">购物车</span>
+<div class="cfl">
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" float="left" width=1333px color=#FF4400 SIZE=2>
+</div><!--分割线-->
 <br>
 <!--换行换不了！-->
 <table class="tableStyle" id="cartTable">
@@ -18,20 +21,22 @@
             </input>
             全选
         </th>
+        <th>商品图片</th>
         <th>商品信息</th>
         <th>单价</th>
         <th>数量</th>
         <th>金额</th>
         <th>操作</th>
     </tr>
+
     </thead>
     <tbody>
     <tr>
         <td class="check"><input class="check_one" type="checkbox" id="checkOne1" name="checkOne"
                                  onClick="countAll()">
             </input></td>
-        <td class="goodsInfo"><img class="imgSize" src="../img/cart/1.jpg">
-            <span display="block" float="left">M4605 mimius定制15夏季新款女日系撞色拼接木耳边织带短袖T </span></td>
+        <td><img class="imgSize" src="../img/cart/1.jpg"></td>
+        <td class="cell"><span class="goodsInfo">M4605 mimius定制15夏季新款女日系撞色拼接木耳边织带短袖T </span></td>
         <td class="price"><span id="price1" name="price">99.99</span></td>
         <td class="count">
             <span class="reduce" id="minus1" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
@@ -47,8 +52,8 @@
         <td class="check"><input class="check_one" type="checkbox" id="checkOne2" name="checkOne"
                                  onClick="countAll()">
             </input></td>
-        <td class="goodsInfo"><img class="imgSize" src="../img/cart/2.jpg">
-            <span>M4625 mimius定制15夏新款女优雅印花名媛篷篷裙半身裙长裙 </span></td>
+        <td><img class="imgSize" src="../img/cart/2.jpg"></td>
+        <td class="cell"><span class="goodsInfo">M4625 mimius定制15夏新款女优雅印花名媛篷篷裙半身裙长裙 </span></td>
         <td class="price"><span id="price2" name="price">79.99</span></td>
         <td class="count">
             <span class="reduce" id="minus2" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
@@ -64,8 +69,8 @@
         <td class="check"><input class="check_one" type="checkbox" id="checkOne3" name="checkOne"
                                  onClick="countAll()">
             </input></td>
-        <td class="goodsInfo"><img class="imgSize" src="../img/cart/3.jpg">
-            <span>M4544 mimius定制15夏新品女马卡龙百搭清新蝴蝶结短袖上衣T恤女 </span></td>
+        <td><img class="imgSize" src="../img/cart/3.jpg"></td>
+        <td class="cell"><span class="goodsInfo">M4544 mimius定制15夏新品女马卡龙百搭清新蝴蝶结短袖上衣T恤女 </span></td>
         <td class="price"><span id="price3" name="price">89.99</span></td>
         <td class="count">
             <span class="reduce" id="minus3" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
@@ -81,8 +86,8 @@
         <td class="check"><input class="check_one" type="checkbox" id="checkOne4" name="checkOne"
                                  onClick="countAll()">
             </input></td>
-        <td class="goodsInfo"><img class="imgSize" src="../img/cart/4.jpg">
-            <span>M4702 mimius15夏新品透视两件套木耳边气质无袖雪纺衬衫</span></td>
+        <td><img class="imgSize" src="../img/cart/4.jpg"></td>
+        <td class="cell"><span class="goodsInfo">M4702 mimius15夏新品透视两件套木耳边气质无袖雪纺衬衫 </span></td>
         <td class="price"><span id="price4" name="price">94.99</span></td>
         <td class="count">
             <span class="reduce" id="minus4" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
