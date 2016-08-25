@@ -29,9 +29,9 @@
     </tbody>
 </table>
 <!--宝贝与描述相符-->
-<div class="fr star">
+<div class="fr descriptionStar">
     <span>宝贝与描述相符：</span>
-    <ul>
+    <ul id="description_list" name="description_list">
         <li><a href="javascript:;">1</a></li>
         <li><a href="javascript:;">2</a></li>
         <li><a href="javascript:;">3</a></li>
@@ -39,20 +39,20 @@
         <li><a href="javascript:;">5</a></li>
     </ul>
 </div>
-<script>
+<script>                                //点击某个星星均会执行的函数
     $(function () {
         var score = new MatchScore({
-            callback: function (cfg) {
-                console.log(cfg.descriptionStarAmount);
+            callback: function (cfg) {//回调函数
+                console.log(cfg.descriptionStarAmount);//在控制台打印星星的数量
             }
         });
     });
 </script>
 
 <!--卖家的服务态度-->
-<div class="fr star">
+<div class="fr attitudeStar">
     <span>卖家的服务态度：</span>
-    <ul>
+    <ul id="attitude_list" name="attitude_list">
         <li><a href="javascript:;">1</a></li>
         <li><a href="javascript:;">2</a></li>
         <li><a href="javascript:;">3</a></li>
@@ -60,9 +60,10 @@
         <li><a href="javascript:;">5</a></li>
     </ul>
 </div>
+
 <script>
     $(function () {
-        var score = new DeliverSpeed({
+        var score = new ServerAttitude({
             callback: function (cfg) {
                 console.log(cfg.attitudeStarAmount);
             }
@@ -71,9 +72,9 @@
 </script>
 
 <!--物流服务的质量-->
-<div class="fr star">
+<div class="fr deliveryStar">
     <span>物流服务的质量：</span>
-    <ul>
+    <ul is="delivery_list" name="delivery_list">
         <li><a href="javascript:;">1</a></li>
         <li><a href="javascript:;">2</a></li>
         <li><a href="javascript:;">3</a></li>
@@ -99,7 +100,7 @@
 <p>
     <textarea class="cfl" name="textArea" cols="60" rows="10" id="textArea" name="textArea" maxlength=500
               onkeydown="availableChar('textArea','countChar','500')"
-              onkeyup="availableChar('textArea','countChar','500')"></textarea><!-- 若只有按键按下或者抬起剩余字数更新不够及时-->
+              onkeyup="availableChar('textArea','countChar','500')"></textarea><!-- 若只有按键按下或者抬起，则剩余字数更新不够及时-->
 </p>
 <div class=" cfl footerBackground">
     <input class="cfl uploadPicture" type="button" id="uploadPicture" name="uploadPicture" value="晒照片"/>

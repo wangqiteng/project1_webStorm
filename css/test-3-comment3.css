@@ -133,24 +133,24 @@ ul, li {
     list-style: none;
 }
 
-.star {
+.descriptionStar, .attitudeStar, .deliveryStar {
     position: relative;
     width: 300px;
     height: 24px;
     margin: 20px auto 0;
 }
 
-.star span {
+.descriptionStar span, .attitudeStar span, .deliveryStar span {
     float: left;
     height: 19px;
     line-height: 19px;
 }
 
-.star ul {
+.descriptionStar ul, .attitudeStar ul, .deliveryStar ul {
     margin: 0 10px;
 }
 
-.star li {
+.descriptionStar li, .attitudeStar li, .deliveryStar li {
     float: left;
     width: 24px;
     height: 22px;
@@ -159,11 +159,11 @@ ul, li {
     cursor: pointer;
 }
 
-.star li.on {
+.descriptionStar li.on, .attitudeStar li.on, .deliveryStar li.on {
     background-position: 0 -28px;
 }
 
-.star p {
+.descriptionStar p, .attitudeStar p, .deliveryStar p {
     background: url('../img/comment/icon.gif') no-repeat;
     padding: 10px 10px 0;
     position: absolute;
@@ -173,13 +173,13 @@ ul, li {
     z-index: 100;
 }
 
-.star p em {
+.descriptionStar p em, .attitudeStar p em, .deliveryStar p em {
     color: #FF6600;
     display: block;
     font-style: normal;
 }
 
-.star strong {
+.descriptionStar strong, .attitudeStar strong, .deliveryStar strong {
     color: #ff6600;
     padding-left: 10px;
 }
