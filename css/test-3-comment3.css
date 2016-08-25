@@ -7,7 +7,6 @@
 }
 
 .title {
-
     display: inline-block;
     letter-spacing: 3px;
     height: 30px;
@@ -34,11 +33,17 @@
     border: 1px #aaa solid;
 }
 
+.cell {
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-top; /*从顶端开始显示*/
+}
 /*设置表头文本样式*/
 .tableTitle {
+    display: inline-block;
     text-align: left;
     font-family: 'Microsoft Yahei';
-    font-size: 16px;
+    font-size: 30px;
 }
 
 /*商品、标题文本样式*/
@@ -49,7 +54,6 @@
 
 /*提示信息文本样式*/
 .tips {
-    /*    clolr:#808080;*/
     color: darkgray;
     margin-top: 7px;
     font-family: 'Microsoft Yahei';
@@ -58,10 +62,12 @@
 
 /*商品信息文本样式*/
 .foodsInfo {
+    position: relative;
+    display: inline-block;
     font-family: 'Microsoft Yahei';
     font-size: 13px;
     color: black;
-    text-decoration: none;
+    text-decoration: none; /*消除下划线*/
 }
 
 /*鼠标悬停在商品信息上时文本变色*/
@@ -69,12 +75,17 @@
     color: blue;
 }
 
-/*图片尺寸设置*/
-.imgSize {
+/*
+!*原始图片尺寸设置*!
+.originalImgSize {
     width: 100px;
     height: 100px;
 }
 
+.enlargeImgSize {
+    width: 200px;
+    height: 200px;
+}*/
 /*剩余字数栏背景样式*/
 .footerBackground {
     height: 30px;
@@ -105,6 +116,7 @@
 /*发布评论按钮样式*/
 .publishComment {
     display: inline-block;
+    margin: auto; /*水平居中显示*/
     width: 150px;
     height: 40px;
     line-height: 25px;

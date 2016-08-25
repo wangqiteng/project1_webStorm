@@ -5,8 +5,47 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/test-3-comment3.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
-    <script src="../js/jquery-3.1.0.min.js"></script>
     <script src="../js/test-3-comment3.js"></script>
+    <style type="text/css">
+        ul, li {
+            list-style: none;
+        }
+
+        .heartPic {
+            width: 0px;
+            height: 0px;
+            margin: 0px 0 0 0;
+        }
+
+        .heartPic ul {
+            float: left;
+            width: 200px;
+        }
+
+        .heartPic ul li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            padding: 2px;
+            cursor: pointer;
+        }
+
+        .heartPic ul li.on {
+            z-index: 99;
+        }
+
+        .heartPic ul li.on .in {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            padding: 5px 5px 20px 5px;
+            background: #666;
+        }
+
+        .heartPic .showDiv {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +55,10 @@
         # star:value = 分数
 -->
 <div class="frontBackground"><span class="fl title">评价宝贝</span></div>
-<HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" width=1022px color=#FF4400 SIZE=2><!--分割线-->
+<div class="cfl">
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" float="left" width=1022px color=#FF4400 SIZE=2>
+</div><!--分割线-->
+
 <table class="cfl tableStyle" id="commentTable">
     <thead>
     <tr class="tableTitle">
@@ -24,8 +66,19 @@
     </tr>
     </thead>
     <tbody>
-    <td><img class="imgSize" src="../img/comment/plaidShirt.jpg"></td>
-    <td><span class="foodsInfo" id="foodsInfo" name="foodsInfo">M4526 mimius夏日新款女格子百搭日系百搭修身无袖衬衫</span></td>
+    <td>
+        <div class="heartPic">
+            <ul>
+                <li>
+                    <div class="in">
+                        <img width="100" height="100" src="../img/comment/plaidShirt.jpg"/><!--图片（可放大）-->
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </td>
+    <td class="cell"><span class="foodsInfo" id="foodsInfo" name="foodsInfo">M4526 mimius夏日新款女格子百搭日系百搭修身无袖衬衫</span></td>
     </tbody>
 </table>
 <!--宝贝与描述相符-->
@@ -109,8 +162,10 @@
 </div>
 </br>
 <!--换行用不了-->
-<input class="cfl publishComment" type="submit" id="publishComment" name="publishComment" value="发表评论"/>
+<div class="cfc"><input class="publishComment" type="submit" id="publishComment" name="publishComment" value="发表评论"/>
+</div>
 <!-- END 星级评分 -->
+<script src="../js/jquery-3.1.0.min.js"></script>                       <!--此句后面可以加快页面加载速度-->
 <script language="javascript">
     //评论文本框,当用户输入时,可以实时统计剩余字符数(假设文本框最多可接受输入maxChar个字符)
 
@@ -122,6 +177,27 @@
             document.getElementById(countCharId).innerHTML = "还可以输入0字";
     }
 
+    /*    function enlargeImage(obj){
+     obj.setAttribute("class","enlargeImgSize");
+     }
+
+     function narrowImage(obj){
+     obj.setAttribute("class","originalImgSize");
+     }*/
+    //放大图片
+    $(function () {
+        $(".heartPic li").hover(function () {
+            $(this).addClass("on");
+            $(this).find("img").animate({"width": "200px", "height": "200px"});
+            $(this).find("div").animate({"width": "200px", "height": "200px"});
+            $(this).find("p").addClass("showDiv");
+        }, function () {
+            $(this).animate({height: "100px"}, 100).removeClass("on");
+            $(this).find("img").stop(true, true).animate({"width": "100px", "height": "100px"});
+            $(this).find("div").stop(true, true).animate({"width": "100px", "height": "100px"});
+
+        });
+    })
 </script>
 </body>
 </html>

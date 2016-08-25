@@ -21,11 +21,24 @@
     float: left;
 }
 
+/*靠底部显示*/
 .fb {
     float: bottom;
 }
 
+/*新开一行，靠底部显示*/
 .cfb {
     clear: both;
     float: bottom;
+}
+
+/*清除格式*/
+.cf {
+    clear: both;
+}
+
+/*清除格式并居中显示*/
+.cfc {
+    clear: both;
+    text-align: center;
 }
