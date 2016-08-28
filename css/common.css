@@ -43,12 +43,41 @@
     text-align: center;
 }
 
+/*设置整个页面的外边距、内边距（上下左右）*/
+.bodyStyle {
+    margin: 10px;
+    padding: 10px;
+}
+
+/*标题栏的背景色样式”*/
+.titleBackground {
+    height: 30px;
+    width: 100%;
+    background: #EFEFEF;
+    font-family: 'Microsoft Yahei';
+}
+
+/*标题文本样式”*/
+.title {
+    display: inline-block;
+    letter-spacing: 3px;
+    height: 30px;
+    font-family: 'Microsoft Yahei';
+    font-size: 16px;
+    color: white;
+    background-color: #FF4400;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+}
+
 /*各个栏背景样式*/
 .footerBackground {
     height: 50px;
     background: #e5e5e5;
     font-family: 'Microsoft Yahei';
-    width: 99%;
+    width: 100%;
     text-align: center;
 }
 

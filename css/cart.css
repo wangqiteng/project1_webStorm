@@ -1,16 +1,9 @@
 @charset "utf-8";
-/*购物车样式*/
-
-/*“购物车”文本样式*/
-.cart {
-    font-family: 'Microsoft Yahei';
-    font-size: 20px;
-    font-weight: normal;
-}
+/*购物车页面样式*/
 
 /*表格边框设置*/
 .tableStyle {
-    width: 99%;
+    width: 100%;
     border: 0;
     cellspacing: 0;
     cellpadding: 0;
