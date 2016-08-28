@@ -37,14 +37,23 @@
     vertical-align: text-top; /*从顶端开始显示*/
 }
 /*商品信息、单价、数量、操作项的文本样式*/
-.goodsInfo, .price, .count, .operation {
+.goodsInfo, .count, .operation {
+    position: relative;
+    color: black;
+    font-family: 'Microsoft Yahei';
+    font-size: 13px;
+    vertical-align: text-top; /*从顶端开始显示*/
+    cursor: pointer;
+}
+
+/*单价文本样式*/
+.price {
     position: relative;
     color: black;
     font-family: 'Microsoft Yahei';
     font-size: 13px;
     vertical-align: text-top; /*从顶端开始显示*/
 }
-
 /*商品信息、操作项在鼠标略过时文本变色*/
 .goodsInfo:hover, .operation:hover, .delete:hover, .moveToFavorite:hover {
     color: blue;
@@ -104,13 +113,6 @@ span.add, span.reduce {
     font-family: 'Microsoft Yahei';
     font-size: 13px;
     color: black;
-}
-
-/*合计栏背景样式*/
-.footerBackground {
-    height: 50px;
-    background: #e5e5e5;
-    font-family: 'Microsoft Yahei';
 }
 
 /*结算按钮样式*/

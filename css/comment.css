@@ -38,6 +38,7 @@
     text-align: center;
     vertical-align: text-top; /*从顶端开始显示*/
 }
+
 /*设置表头文本样式*/
 .tableTitle {
     display: inline-block;
@@ -75,11 +76,15 @@
     color: blue;
 }
 
-.footerBackground {
+.commentBackground {
     height: 30px;
     width: 440px;
     background: #EEF8FD;
     font-family: 'Microsoft Yahei';
+}
+
+.commentText {
+
 }
 
 /*上传图片按钮样式*/

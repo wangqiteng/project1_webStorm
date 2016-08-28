@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>购物车页面</title>
-    <link rel="stylesheet" type="text/css" href="../css/test-2-cart3.css">
+    <link rel="stylesheet" type="text/css" href="../css/cart.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
     <script type="text/javascript" src="./js/shoppingCart.js"></script>
 </head>
 <body>
 <span class="fl cart">购物车</span>
 <div class="cfl">
-    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" float="left" width=1333px color=#FF4400 SIZE=2>
+    <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" float="left" width=1318px color=#FF4400 SIZE=2>
 </div><!--分割线-->
 <br>
 <!--换行换不了！-->
@@ -28,7 +28,6 @@
         <th>金额</th>
         <th>操作</th>
     </tr>
-
     </thead>
     <tbody>
     <tr>
@@ -40,7 +39,8 @@
         <td class="price"><span id="price1" name="price">99.99</span></td>
         <td class="count">
             <span class="reduce" id="minus1" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
-            <input type="text" class="countInput" id="amount1" name="amount" value="1" size="10" maxlength="20">
+            <input type="text" class="countInput" id="amount1" name="amount" value="1" size="10" maxlength="20"
+                   onblur="sumPrice(),countAll()">
             </input>
             <span class="add" id="add1" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
         <td class="priceTotleNumber"><span id="sumPrice1" name="sumPrice"></span></td>
@@ -57,7 +57,8 @@
         <td class="price"><span id="price2" name="price">79.99</span></td>
         <td class="count">
             <span class="reduce" id="minus2" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
-            <input type="text" class="countInput" id="amount2" name="amount" value="2" size="10" maxlength="20">
+            <input type="text" class="countInput" id="amount2" name="amount" value="2" size="10" maxlength="20"
+                   onblur="sumPrice(),countAll()">
             </input>
             <span class="add" id="add2" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
         <td class="priceTotleNumber"><span id="sumPrice2" name="sumPrice"></span></td>
@@ -74,7 +75,8 @@
         <td class="price"><span id="price3" name="price">89.99</span></td>
         <td class="count">
             <span class="reduce" id="minus3" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
-            <input type="text" class="countInput" id="amount3" name="amount" value="3" size="10" maxlength="20">
+            <input type="text" class="countInput" id="amount3" name="amount" value="3" size="10" maxlength="20"
+                   onblur="sumPrice(),countAll()">
             </input>
             <span class="add" id="add3" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
         <td class="priceTotleNumber"><span id="sumPrice3" name="sumPrice"></span></td>
@@ -91,7 +93,8 @@
         <td class="price"><span id="price4" name="price">94.99</span></td>
         <td class="count">
             <span class="reduce" id="minus4" name="minus" onclick="minusAmount(this),sumPrice(),countAll()">-</span>
-            <input type="text" class="countInput" id="amount4" name="amount" value="4" size="10" maxlength="20">
+            <input type="text" class="countInput" id="amount4" name="amount" value="4" size="10" maxlength="20"
+                   onblur="sumPrice(),countAll()">
             </input>
             <span class="add" id="add4" name="add" onClick="addAmount(this),sumPrice(),countAll()">+</span></td>
         <td class="priceTotleNumber"><span id="sumPrice4" name="sumPrice"></span></td>
@@ -99,6 +102,7 @@
         <td class="operation"><span class="moveToFavorite" id="moveToFavorite4"
                                     onclick="moveToFavorite(this),countAll()">移至收藏夹</span></td>
     </tr>
+
     </tbody>
 </table>
 
@@ -125,6 +129,10 @@
     </div>
 </div>
 
+<div class="copy_layout footerBackground">
+    <p>Copyright &copy; 2016.Company name 版权所有</p>                  <!--公司名称-->
+</div>
+
 <script language="javascript">
     //处理全选复选框的全选/取消全选
     function checkAll() {
@@ -141,7 +149,7 @@
             document.getElementById("checkAll1").checked = false;
             document.getElementById("checkAll2").checked = false;
         }
-    }
+            }
 
     //计算每种商品的金额（金额=单价*数量）
     function sumPrice() {
@@ -149,15 +157,17 @@
         var amount = document.getElementsByName("amount");			        //数量
         var sumPrice = document.getElementsByName("sumPrice");		        //金额
         for (var i = 0; i < price.length; ++i) {					            //计算每种商品的金额
+            if (isNaN(amount.item(i).value) || amount.item(i).value < 1)
+                amount.item(i).value = 1;                                       //保证输入的是数字且数量大于0
             sumPrice.item(i).innerHTML = (price.item(i).innerHTML * amount.item(i).value).toFixed(2);
         }
-    }
+            }
     sumPrice();														            //页面加载时,调用函数,会计算一次
 
     //某商品数量加1
     function addAmount(obj) {
         ++(document.getElementById(obj.id).previousElementSibling.value);  //根据加标签取得数量值并加1
-    }
+            }
     //某商品数量减1
     function minusAmount(obj) {
         if (document.getElementById(obj.id).nextElementSibling.value > 1)    //根据加标签取得数量值并减1（前提是数量大于1）
@@ -206,10 +216,10 @@
         }
         else {                                                                   //删除某件商品
             row = obj.parentNode.parentNode.rowIndex;
-            table.deleteRow(row);
+                    table.deleteRow(row);
 
-        }
-    }
+                }
+            }
     //将某件商品移至收藏夹
     //（要将数据移至收藏夹，此处后期要与其他页面关联，暂未做）///////////////////////////////////////////////////////
     function moveToFavorite(obj) {
@@ -228,9 +238,9 @@
         }
         else {                                                                   //删除某件商品并移至收藏夹
             row = obj.parentNode.parentNode.rowIndex;
-            table.deleteRow(row);
-        }
-    }
+                    table.deleteRow(row);
+                }
+            }
 </script>
 </body>
 </html>

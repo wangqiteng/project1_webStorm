@@ -42,3 +42,21 @@
     clear: both;
     text-align: center;
 }
+
+/*各个栏背景样式*/
+.footerBackground {
+    height: 50px;
+    background: #e5e5e5;
+    font-family: 'Microsoft Yahei';
+    width: 99%;
+    text-align: center;
+}
+
+/*公司名称文本样式*/
+.copy_layout {
+    display: inline-block;
+    margin-top: 15px;
+    line-height: 50px;
+    font-family: "Microsoft Yahei";
+    font-size: 13px;
+}

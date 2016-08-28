@@ -3,9 +3,9 @@
 <head>
     <title> 收获评论页面 </title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/test-3-comment3.css">
+    <link rel="stylesheet" type="text/css" href="../css/comment.css">
     <link rel="stylesheet" type="text/css" href="../css/common.css">
-    <script src="../js/test-3-comment3.js"></script>
+    <script src="../js/comment.js"></script>
     <script src="../js/jquery-3.1.0.min.js"></script>
 
     <!-- 图片放大样式-->
@@ -51,17 +51,17 @@
     </style>
 </head>
 
-<body>
+<br>                                                                        <!--空一行-->
 
 <!--
         # 星级评分
         # star:value = 分数
 -->
 <div class="frontBackground"><span class="fl title">评价宝贝</span></div>
-<div class="cfl">
+<div class="cfl">                                                          <!--分割线-->
     <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=1)" float="left" width=1022px color=#FF4400 SIZE=2>
-</div><!--分割线-->
-
+</div>
+<!--商品信息-->
 <table class="cfl tableStyle" id="commentTable">
     <thead>
     <tr class="tableTitle">
@@ -73,8 +73,8 @@
         <div class="heartPic">
             <ul>
                 <li>
-                    <div class="in">
-                        <img width="100" height="100" src="../img/comment/plaidShirt.jpg"/><!--图片（可放大）-->
+                    <div class="in">                                    <!--图片（可放大）-->
+                        <img width="100" height="100" src="../img/comment/plaidShirt.jpg"/>
                     </div>
                 </li>
 
@@ -84,6 +84,7 @@
     <td class="cell"><span class="foodsInfo" id="foodsInfo" name="foodsInfo">M4526 mimius夏日新款女格子百搭日系百搭修身无袖衬衫</span></td>
     </tbody>
 </table>
+
 <!--宝贝与描述相符-->
 <div class="fr descriptionStar">
     <span>宝贝与描述相符：</span>
@@ -93,16 +94,16 @@
         <li><a href="javascript:;">3</a></li>
         <li><a href="javascript:;">4</a></li>
         <li><a href="javascript:;">5</a></li>
-    </ul>
-</div>
+            </ul>
+        </div>
 <script>                                //点击某个星星均会执行的函数
-    $(function () {
-        var score = new MatchScore({
-            callback: function (cfg) {//回调函数
-                console.log(cfg.descriptionStarAmount);//在控制台打印星星的数量
-            }
-        });
+$(function () {
+    var score = new MatchScore({
+        callback: function (cfg) {//回调函数
+            console.log(cfg.descriptionStarAmount);//在控制台打印星星的数量
+        }
     });
+        });
 </script>
 
 <!--卖家的服务态度-->
@@ -149,23 +150,30 @@
 </script>
 
 
-<br/>
+<br><br/>
 <!--换行符无效！-->
 
 <!--评论框-->
-<p>
-    <textarea class="cfl" name="textArea" cols="60" rows="10" id="textArea" name="textArea" maxlength=500
-              onkeydown="availableChar('textArea','countChar','500')"
-              onkeyup="availableChar('textArea','countChar','500')"></textarea><!-- 若只有按键按下或者抬起，则剩余字数更新不够及时-->
-</p>
-<div class=" cfl footerBackground">
+<div>
+    <br>
+    <p>
+                <textarea class="cfl" name="textArea" id="textArea" name="textArea" cols="60" rows="10" maxlength=500
+                          onkeydown="availableChar('textArea','countChar','500')"
+                          onkeyup="availableChar('textArea','countChar','500')"></textarea>
+        <!-- 若只有按键按下或者抬起，则剩余字数更新不够及时-->
+    </p>
+</div>
+<div class=" cfl commentBackground">
     <input class="cfl uploadPicture" type="button" id="uploadPicture" name="uploadPicture" value="晒照片"/>
-
     <span class="fr tips" id="countChar">还可以输入500字</span>
 </div>
-</br>
+
 <!--换行用不了-->
 <div class="cfc"><input class="publishComment" type="submit" id="publishComment" name="publishComment" value="发表评论"/>
+</div>
+
+<div class="copy_layout footerBackground">
+    <p>Copyright &copy; 2016.Company name 版权所有</p>                  <!--公司名称-->
 </div>
 <!-- END 星级评分 -->
 
@@ -178,9 +186,9 @@
             document.getElementById(countCharId).innerHTML = "还可以输入" + (maxChar - nowCountChar) + "字";
         else
             document.getElementById(countCharId).innerHTML = "还可以输入0字";
-    }
+            }
 
-    //放大图片
+    //放大图片函数
     $(function () {
         $(".heartPic li").hover(function () {
             $(this).addClass("on");
